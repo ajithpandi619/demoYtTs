@@ -7,12 +7,12 @@ import { getFirestore, serverTimestamp } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAzoVs7AsQEmhMouOdQcSVSwDWm_kY39dY",
-  authDomain: "yt-clone-afe21.firebaseapp.com",
-  projectId: "yt-clone-afe21",
-  storageBucket: "yt-clone-afe21.appspot.com",
-  messagingSenderId: "733407520498",
-  appId: "1:733407520498:web:90da51bc47d92046ded26b",
+  apiKey: "AIzaSyAoMDi04Ag6QJ_tpA4gHMMQjP2ProKHoZE",
+  authDomain: "clone-fca1e.firebaseapp.com",
+  projectId: "clone-fca1e",
+  storageBucket: "clone-fca1e.appspot.com",
+  messagingSenderId: "449761743033",
+  appId: "1:449761743033:web:da29a2fe7df827bb084b68",
 };
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

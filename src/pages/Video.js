@@ -80,8 +80,8 @@ const Video = () => {
   };
 
   return (
-    <div className="py-20 px-9 bg-yt-black flex flex-row h-full">
-      <div className="left flex-1">
+    <div className="flex flex-row h-full py-20 px-9 bg-yt-black">
+      <div className="flex-1 left">
         <div className="flex justify-center">
           <iframe
             src={`https://www.youtube.com/embed/${data?.link}`}
@@ -92,7 +92,7 @@ const Video = () => {
             className="w-[850px] h-[700px] flex-1"
           ></iframe>
         </div>
-        <h2 className="text-yt-white font-semibold mt-3 mb-1 text-lg">
+        <h2 className="mt-3 mb-1 text-lg font-semibold text-yt-white">
           {data?.title}
         </h2>
         <div className="flex">
@@ -100,10 +100,10 @@ const Video = () => {
             <img
               src={data?.logo}
               alt={data?.channel}
-              className="rounded-full w-10 h-10"
+              className="w-10 h-10 rounded-full"
             />
             <div className="px-3">
-              <h3 className="text-yt-white font-medium text-base">
+              <h3 className="text-base font-medium text-yt-white">
                 {data?.channel && data?.channel.length <= 25
                   ? data?.channel
                   : `${data?.channel && data?.channel.substr(0, 20)}...`}
@@ -112,55 +112,55 @@ const Video = () => {
                 {data?.subscribers} subscribers
               </p>
             </div>
-            <button className="bg-yt-white px-3 py-2 rounded-lg text-sm font-medium ml-3">
+            <button className="px-3 py-2 ml-3 text-sm font-medium rounded-lg bg-yt-white">
               Subscribe
             </button>
             <div className="flex pl-28">
-              <div className="flex bg-yt-light-black items-center rounded-2xl h-10 mx-1 hover:bg-yt-light-1">
-                <div className="flex px-3 items-center border-r-2 border-r-yt-light-1 cursor-pointer">
-                  <AiFillLike className="text-yt-white text-2xl" />
-                  <p className="text-yt-white pl-2 pr-3 text-sm font-semibold">
+              <div className="flex items-center h-10 mx-1 bg-yt-light-black rounded-2xl hover:bg-yt-light-1">
+                <div className="flex items-center px-3 border-r-2 cursor-pointer border-r-yt-light-1">
+                  <AiFillLike className="text-2xl text-yt-white" />
+                  <p className="pl-2 pr-3 text-sm font-semibold text-yt-white">
                     300K
                   </p>
                 </div>
-                <div className="cursor-pointer pl-4 pr-5">
+                <div className="pl-4 pr-5 cursor-pointer">
                   <BiDislike className="text-[22px] font-extralight text-yt-white" />
                 </div>
               </div>
-              <div className="flex bg-yt-light-black items-center rounded-2xl h-10 mx-1 cursor-pointer hover:bg-yt-light-1">
-                <div className="flex px-3 items-center cursor-pointer">
-                  <RiShareForwardLine className="text-2xl text-yt-white font-thin" />
-                  <p className="text-yt-white pl-2 pr-3 text-sm font-semibold">
+              <div className="flex items-center h-10 mx-1 cursor-pointer bg-yt-light-black rounded-2xl hover:bg-yt-light-1">
+                <div className="flex items-center px-3 cursor-pointer">
+                  <RiShareForwardLine className="text-2xl font-thin text-yt-white" />
+                  <p className="pl-2 pr-3 text-sm font-semibold text-yt-white">
                     Share
                   </p>
                 </div>
               </div>
-              <div className="flex bg-yt-light-black items-center rounded-2xl h-10 mx-1 cursor-pointer hover:bg-yt-light-1">
-                <div className="flex px-3 items-center cursor-pointer">
-                  <HiDownload className="text-2xl text-yt-white font-thin" />
-                  <p className="text-yt-white pl-2 pr-3 text-sm font-semibold">
+              <div className="flex items-center h-10 mx-1 cursor-pointer bg-yt-light-black rounded-2xl hover:bg-yt-light-1">
+                <div className="flex items-center px-3 cursor-pointer">
+                  <HiDownload className="text-2xl font-thin text-yt-white" />
+                  <p className="pl-2 pr-3 text-sm font-semibold text-yt-white">
                     Download
                   </p>
                 </div>
               </div>
 
-              <div className="flex bg-yt-light-black hover:bg-yt-light-1 cursor-pointer items-center rounded-full justify-center w-10 h-10 text-yt-white">
+              <div className="flex items-center justify-center w-10 h-10 rounded-full cursor-pointer bg-yt-light-black hover:bg-yt-light-1 text-yt-white">
                 <HiDotsHorizontal />
               </div>
             </div>
           </div>
         </div>
-        <div className="max-w-4xl bg-yt-light-black mt-4 rounded-2xl text-sm p-3 text-yt-white">
+        <div className="max-w-4xl p-3 mt-4 text-sm bg-yt-light-black rounded-2xl text-yt-white">
           <div className="flex">
-            <p className="font-medium pr-3">
+            <p className="pr-3 font-medium">
               {data?.views}
               <span className="pl-1 text-xs">Views</span>
             </p>
-            <p className="font-medium pr-3">{data?.uploadTime}</p>
+            <p className="pr-3 font-medium">{data?.uploadTime}</p>
           </div>
-          <span className="text-center font-medium">{data?.description}</span>
+          <span className="font-medium text-center">{data?.description}</span>
         </div>
-        <div className="text-yt-white mt-5">
+        <div className="mt-5 text-yt-white">
           <div className="flex items-center">
             <h1>{comments.length} Comments</h1>
             <div className="flex items-center mx-10">
@@ -177,7 +177,7 @@ const Video = () => {
               <img
                 src={user?.photoURL}
                 alt="profile"
-                className="rounded-full mr-3 h-12 w-12"
+                className="w-12 h-12 mr-3 rounded-full"
               />
               <input
                 value={comment}
@@ -198,10 +198,10 @@ const Video = () => {
 
       <div className="right px-3 overflow-y-hidden flex-[0.4]">
         <div>
-          <div className="flex flex-row px-3 overflow-x-scroll relative scrollbar-hide">
+          <div className="relative flex flex-row px-3 overflow-x-scroll scrollbar-hide">
             {CategoryItems.map((item, i) => (
               <h2
-                className="text-yt-white font-normal text-sm py-2 px-4 break-keep whitespace-nowrap bg-yt-light mr-3 cursor-pointer rounded-lg hover:bg-yt-light-1"
+                className="px-4 py-2 mr-3 text-sm font-normal rounded-lg cursor-pointer text-yt-white break-keep whitespace-nowrap bg-yt-light hover:bg-yt-light-1"
                 key={i}
               >
                 {item}
